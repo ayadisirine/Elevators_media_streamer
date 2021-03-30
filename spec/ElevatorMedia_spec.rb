@@ -17,7 +17,7 @@ RSpec.describe ElevatorMedia::Streamer do
 
             streamer.getContent()
             container = streamer.instance_variable_get('@jokes')
-            expect(container['response'][0]).to be_kind_of String
+            expect(container['setup']).to be_kind_of String
          end
       end   
    end

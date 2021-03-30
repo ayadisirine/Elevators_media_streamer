@@ -50,11 +50,10 @@ module ElevatorMedia
             </div><div class=\"col-md-6\">
             <h2 style=\"color:darkblue\">JOKE <br> 
              
-            Joke:#{@jokes['response'][0]} 
+            Joke:#{@jokes['setup']} 
             <h2 style=\"color:darkblue\">:)</h2></div></div>"
          return output
       end
-      # --- /GET CONTENT ---
+      
    end
 end
-# binding.pry{}
