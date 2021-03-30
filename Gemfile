@@ -143,3 +143,4 @@ gem 'recaptcha', require: 'recaptcha/rails'
 #unirest
 gem 'unirest'
 gem 'rspec', '~> 3.0'
+gem 'pry-byebug'
