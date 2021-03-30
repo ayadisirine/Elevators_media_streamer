@@ -1,7 +1,6 @@
 
 require 'rest-client'
 require 'rails_helper'
-require 'elevator_media/Streamer'
 require 'unirest'
 
 module ElevatorMedia
