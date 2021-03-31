@@ -45,11 +45,25 @@ RSpec.describe ElevatorMedia::Streamer do
             end
         end
 
-      context 'output type' do 
-        it 'return another joke ' do
-           expect(streamer.getContent()).to be_kind_of String
+        #Third test : Check joke type L 
+        context 'joke type' do 
+            # Expected return 
+            it 'returns required joke type' do
+                text = streamer.GetJokeByType("Programming")
+               
+                #Make the test 
+                container = streamer.instance_variable_get('@jokes')
+                #RETURNED JSON #
+
+                expect(container['type'].eql? "Programming")
+
+                
+
+                
+            end
         end
-     end  
+
+
    end
    
 end

@@ -54,6 +54,15 @@ module ElevatorMedia
         puts output
          return output
       end
+
+      #Get joke by type 
+      def GetJokeByType(joketype)
+
+
+        return nil;
+     end
+
+
       
    end
 end
