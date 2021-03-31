@@ -15,7 +15,7 @@ module ElevatorMedia
       end
    
       def APIConnect()
-         # --- connect to the API ---
+         # connect to the JOKE API 
          url = URI('https://jokeapi-v2.p.rapidapi.com/joke/Any')
       
          http = Net::HTTP.new(url.host, url.port)
@@ -28,7 +28,6 @@ module ElevatorMedia
 
          response = http.request(request)
          json_response = JSON.parse(response.body)
-         puts "responssssssssssssssssse"
          puts json_response
          
          if response.code != "200" || json_response['results'] == 0
@@ -36,13 +35,13 @@ module ElevatorMedia
          end
          json_response
       end
-      # --- /connect to the API ---
+      
 
-      # --- GET CONTENT ---
-      # --- Get, process, and deliver the content ---
+      #  GET CONTENT 
+      #  Get, process, and deliver the content
       def getContent
          @jokes = self.APIConnect()
-          
+        
          output = 
             " <div  class=\"row alert alert-warning\">      
             <div class=\"col-md-2\">
@@ -52,6 +51,7 @@ module ElevatorMedia
              
             Joke:#{@jokes['setup']} 
             <h2 style=\"color:darkblue\">:)</h2></div></div>"
+        puts output
          return output
       end
       
