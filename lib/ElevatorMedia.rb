@@ -30,7 +30,9 @@ module ElevatorMedia
          json_response = JSON.parse(response.body)
          puts json_response
          
-
+         if response.code != "200" || json_response['results'] == 0
+            return "Error : Bad Request"
+         end
          json_response
       end
       
