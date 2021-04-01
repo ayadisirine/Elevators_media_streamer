@@ -49,18 +49,19 @@ RSpec.describe ElevatorMedia::Streamer do
         context 'wrong API URL' do 
             # Expected return 
             it 'returns an exception error' do
+                streamer2 = ElevatorMedia::Streamer.new
                 url = URI('https://www.google.com')
-                @jokes = self.APIConnect(url)
+                @json_r = streamer2.APIConnect(url)
                
                 #Make the test 
                 
-                expect(@jokes.to be_kind_of String)
+                expect(@json_r.include? "Error")
             end
         end
 
 
 
-        #Third test : Check joke type L 
+        #Fourth test : Check joke type L 
         context 'joke type' do 
             # Expected return 
             it 'returns required joke type' do
