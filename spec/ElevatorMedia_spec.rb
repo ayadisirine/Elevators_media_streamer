@@ -39,11 +39,26 @@ RSpec.describe ElevatorMedia::Streamer do
                 #Make the test 
                 full_sanitizer = Rails::Html::FullSanitizer.new
                 expect(full_sanitizer.sanitize(text).eql?  (text))
-                
-
-                
             end
         end
+
+
+
+        ##############################################################################
+        #Third test : Check when wrong API URL  
+        context 'wrong API URL' do 
+            # Expected return 
+            it 'returns an exception error' do
+                url = URI('https://www.google.com')
+                @jokes = self.APIConnect(url)
+               
+                #Make the test 
+                
+                expect(@jokes.to be_kind_of String)
+            end
+        end
+
+
 
         #Third test : Check joke type L 
         context 'joke type' do 

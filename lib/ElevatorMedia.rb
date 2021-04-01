@@ -14,9 +14,9 @@ module ElevatorMedia
          puts "initialize test "
       end
    
-      def APIConnect()
+      def APIConnect(url)
          # connect to the JOKE API 
-         url = URI('https://jokeapi-v2.p.rapidapi.com/joke/Any')
+         
       
          http = Net::HTTP.new(url.host, url.port)
          http.use_ssl = true
@@ -30,9 +30,7 @@ module ElevatorMedia
          json_response = JSON.parse(response.body)
          puts json_response
          
-         if response.code != "200" || json_response['results'] == 0
-            return "Bad Request"
-         end
+
          json_response
       end
       
@@ -40,7 +38,8 @@ module ElevatorMedia
       #  GET CONTENT 
       #  Get, process, and deliver the content
       def getContent
-         @jokes = self.APIConnect()
+         url = URI('https://jokeapi-v2.p.rapidapi.com/joke/Any')
+         @jokes = self.APIConnect(url)
         
          output = 
             " <div  class=\"row alert alert-warning\">      
