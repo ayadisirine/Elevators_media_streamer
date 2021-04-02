@@ -142,7 +142,7 @@ gem 'recaptcha', require: 'recaptcha/rails'
 
 #unirest
 gem 'unirest'
-gem 'rspec', '~> 3.0'
+#gem 'rspec', '~> 3.0'
 gem 'pry-byebug'
 gem 'rspec-html', '~> 0.2.5'
 gem 'rails-html-sanitizer'
