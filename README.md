@@ -244,6 +244,10 @@ Feature:
         spec/elevator_media_spec.rb
         bundle exec rspec --format documentation :to execute all test
         bundle exec rspec ./spec/quote_spec.rb --format documentation : test the Quote
+        </br>
         bundle exec rspec ./spec/interventions_spec.rb --format documentation : test the interventions
+        </br>
         bundle exec rspec ./spec/leads_spec.rb --format documentation : test the leads 
+        </br>
+        
         
