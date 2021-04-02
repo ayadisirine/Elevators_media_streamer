@@ -229,8 +229,21 @@ Azure deployment: https://sirinerocketelevatorsrestapi.azurewebsites.net/
   Example: https://sirinerocketelevatorsrestapi.azurewebsites.net/api/interventions/completed/4 
   Scoop: to make the intervention status Completed, and set en ending date, and time
   </br>
+# week 10 : TDD #
+Principal requirement: 
+Feature:
+    API NAME: jokeapi-v2
+   https://jokeapi-v2.p.rapidapi.com/joke/Any
 
-
+   related file in my app:
+        lib/ElevatorMedia.rb
+        spec/elevator_media_spec.rb
+        bundle exec rspec --format documentation :to execute all test
+        bundle exec rspec ./spec/quote_spec.rb --format documentation : test the Quote
+        bundle exec rspec ./spec/interventions_spec.rb --format documentation : test the interventions
+        bundle exec rspec ./spec/leads_spec.rb --format documentation : test the leads 
+        
+    
 
 
 
