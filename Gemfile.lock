@@ -255,6 +255,7 @@ GEM
       net-ssh (>= 2.6.5, < 7.0.0)
     net-ssh (6.1.0)
     netrc (0.11.0)
+    newrelic_rpm (7.0.0)
     nio4r (2.5.7)
     nokogiri (1.11.1-x64-mingw32)
       racc (~> 1.4)
@@ -508,6 +509,7 @@ DEPENDENCIES
   mimemagic!
   multiverse
   mysql2 (>= 0.4.4, < 0.6.0)
+  newrelic_rpm
   openweather2
   pg
   popper_js (~> 1.9, >= 1.9.9)
