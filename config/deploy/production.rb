@@ -50,11 +50,13 @@ role :db,  %w{ubuntu@99.79.75.42}
 #
 # Global options
 # --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+  set :pty, true
+  set :ssh_options, {
+    keys: %w(/usr/local/share/ca-certificates/LightsailDefaultKey-ca-central-1.pem),
+    forward_agent: true,
+    auth_methods: %w[publickey]
+  }
+#
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
