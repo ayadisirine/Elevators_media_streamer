@@ -171,6 +171,7 @@ GEM
     geocoder (1.6.6)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    google-analytics-rails (1.1.0)
     haml (5.2.1)
       temple (>= 0.8.0)
       tilt
@@ -498,6 +499,7 @@ DEPENDENCIES
   figaro
   font-awesome-rails
   geocoder
+  google-analytics-rails (= 1.1.0)
   ibm_watson
   jbuilder (~> 2.5)
   jquery-rails
